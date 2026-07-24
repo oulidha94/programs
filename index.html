@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Lanterne — Etik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f0e0c; --paper:#f4f0e8; --warm:#e8e0cc;
+    --accent:#c84b2f; --accent2:#3d6b5e; --muted:#7a7367;
+    --serif:'Fraunces', Georgia, serif; --sans:'DM Sans', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased;}
+
+  .wrap{max-width:900px; margin:0 auto; padding:0 28px;}
+  header{padding:64px 0 56px; text-align:center;}
+  .logo{font-family:var(--serif); font-weight:700; font-size:18px; position:relative; display:inline-block; margin-bottom:40px;}
+  .logo::after{content:''; position:absolute; top:8%; right:-13px; width:5px; height:5px; border-radius:50%; background:var(--accent);}
+
+  .badge{
+    display:inline-block; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--accent); border:1px solid var(--warm); border-radius:20px; padding:8px 20px; margin-bottom:32px;
+  }
+  h1{font-family:var(--serif); font-style:italic; font-weight:400; font-size:56px; color:var(--ink); margin-bottom:24px;}
+  .subtitle{font-size:17px; color:var(--muted); max-width:52ch; margin:0 auto;}
+
+  .list{border:1px solid var(--warm); margin:0 0 80px;}
+  .row{
+    display:flex; align-items:center; gap:28px; padding:32px 36px;
+    border-bottom:1px solid var(--warm);
+    text-decoration:none; color:var(--ink);
+    transition:background-color .2s ease;
+  }
+  .row:last-child{border-bottom:none;}
+  .row.active:hover{background:var(--warm);}
+  .row.upcoming{opacity:0.55; cursor:default;}
+  .row .num{font-family:var(--serif); font-style:italic; font-size:26px; color:var(--muted); min-width:36px; flex-shrink:0;}
+  .row .body{flex:1;}
+  .row .tag{font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px;}
+  .row .title-line{font-size:16px;}
+  .row .title-line b{font-family:var(--serif); font-weight:700; font-size:19px; margin-right:8px;}
+  .row .desc{color:var(--muted); font-size:14px;}
+  .row .cta{font-size:11.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); flex-shrink:0; white-space:nowrap;}
+  .row.upcoming .cta{color:var(--muted);}
+
+  footer{padding-bottom:64px; text-align:center;}
+  footer .contact{font-size:12.5px; color:var(--muted);}
+  footer .contact a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--muted);}
+
+  @media (max-width:640px){
+    h1{font-size:38px;}
+    .row{flex-direction:column; align-items:flex-start; gap:12px; padding:26px 22px;}
+    .row .num{font-size:20px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Etik</div>
+    <div class="badge">Collection en cours</div>
+    <h1>La Lanterne</h1>
+    <p class="subtitle">Les formations Etik, présentées pour donner envie d'y entrer avant de les suivre.</p>
+  </header>
+
+  <div class="list">
+    <a class="row active" href="./le-temps-regagne.html">
+      <div class="num">01</div>
+      <div class="body">
+        <div class="tag">IA générative · Productivité</div>
+        <div class="title-line"><b>Le temps regagné</b>Manager et produire avec l'IA générative, en trois jours.</div>
+      </div>
+      <span class="cta">Entrer →</span>
+    </a>
+    <div class="row upcoming">
+      <div class="num">02</div>
+      <div class="body">
+        <div class="tag">À venir</div>
+        <div class="title-line"><b>Prochain programme</b>Une autre formation rejoindra bientôt le portail.</div>
+      </div>
+      <span class="cta">Bientôt</span>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contact">Etik — Conseil &amp; Formation · <a href="mailto:samibm@etik.com">samibm@etik.com</a> · <a href="https://samibenmansour.com">samibenmansour.com</a></div>
+  </footer>
+</div>
+</body>
+</html>
